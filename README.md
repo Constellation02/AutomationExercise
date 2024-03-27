@@ -45,3 +45,16 @@ In order to generate Report:
 <ol> 16. Verify that 'Logged in as username' is visible </ol>
 <ol> 17. Click 'Delete Account' button </ol>
 <ol> 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button </ol>
+
+---
+
+### :white_check_mark: Test Case 2: Login User with correct email and password
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click on 'Signup / Login' button </ol>
+<ol> 5. Verify 'Login to your account' is visible </ol>
+<ol> 6. Enter correct email address and password </ol>
+<ol> 7. Click 'login' button </ol>
+<ol> 8. Verify that 'Logged in as username' is visible </ol>
+
