@@ -39,6 +39,7 @@ class RegisterUser:
         self.LOGGED_AS = (By.XPATH, "//a[contains(.,'Logged in as Fabio Armando')]")
         self.DELETE_BTN = (By.XPATH, "//a[@href='/delete_account'][contains(.,'Delete Account')]")
         self.ACCOUNT_DELETED_B = (By.XPATH, "//b[text()='Account Deleted!']")
+        
 
         
     

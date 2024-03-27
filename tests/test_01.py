@@ -6,7 +6,9 @@ import time
 
 class RegisterDemo(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--incognito")
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get('http://automationexercise.com')
         self.driver.maximize_window()
         print("page loaded")
@@ -18,7 +20,7 @@ class RegisterDemo(unittest.TestCase):
         login_page.get_success_message_text()
         print("Assertion passed: 'New User Signup!' text is visible")
         login_page.enter_username("Fabio")
-        login_page.enter_email("Laparatuya618@gmail.com")
+        login_page.enter_email("Laparatuya58@gmail.com")
         login_page.register_sign_up()
         login_page.btn_mr()
         login_page.get_enteraccunt_message()
