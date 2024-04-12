@@ -72,3 +72,17 @@ In order to generate Report:
 <ol> 6. Enter incorrect email address and password </ol>
 <ol> 7. Click 'login' button </ol>
 <ol> 8. Verify error 'Your email or password is incorrect!' is visible </ol>
+
+---
+
+### :white_check_mark: Test Case 4: Logout User
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click on 'Signup / Login' button </ol>
+<ol> 5. Verify 'Login to your account' is visible </ol>
+<ol> 6. Enter correct email address and password </ol>
+<ol> 7. Click 'login' button </ol>
+<ol> 8. Verify that 'Logged in as username' is visible </ol>
+<ol> 9. Click 'Logout' button </ol>
+<ol> 10. Verify that user is navigated to login page </ol>
