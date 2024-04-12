@@ -22,8 +22,11 @@ In order to generate Report:
 * Commandline: 
 ` python -m pytest -v --html=reports/report.html `
 
-* Just run the test: 
+* Just run all the test: 
 ` python -m `
+
+* Just run one test: 
+` pytest tests\test_03.py `
 
 ## :100: The project includes all available test cases:
 ### :white_check_mark: Test Case 1: Register User
