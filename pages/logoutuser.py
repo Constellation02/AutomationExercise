@@ -13,7 +13,7 @@ class LogoutUser:
         self.BTN_LOGIN = (By.XPATH, "//button[@type='submit'][contains(.,'Login')]")
         self.LOGIN_AS = (By.XPATH, "//a[contains(.,'Logged in as Fabio')]")
         self.LOGOUT_BTN = (By.XPATH, "//a[@href='/logout'][contains(.,'Logout')]")
-        self.URL = ()
+        
 
     def menu_login(self):
         try:
