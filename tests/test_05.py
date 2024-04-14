@@ -24,3 +24,5 @@ class ExistingEmailDemo(unittest.TestCase):
         time.sleep(5)
 
 
+    def tearDown(self):
+        self.driver.quit()
