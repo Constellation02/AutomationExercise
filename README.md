@@ -113,3 +113,12 @@ In order to generate Report:
 <ol> 9. Click OK button </ol>
 <ol> 10. Verify success message 'Success! Your details have been submitted successfully.' is visible </ol>
 <ol> 11. Click 'Home' button and verify that landed to home page successfully </ol>
+
+---
+
+### :white_check_mark: Test Case 7: Verify Test Cases Page
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click on 'Test Cases' button </ol>
+<ol> 5. Verify user is navigated to test cases page successfully </ol>
