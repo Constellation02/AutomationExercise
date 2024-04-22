@@ -147,3 +147,14 @@ In order to generate Report:
 <ol> 6. Enter product name in search input and click search button </ol>
 <ol> 7. Verify 'SEARCHED PRODUCTS' is visible </ol>
 <ol> 8. Verify all the products related to search are visible </ol>
+
+---
+
+### :white_check_mark: Test Case 10: Verify Subscription in home page
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Scroll down to footer </ol>
+<ol> 5. Verify text 'SUBSCRIPTION' </ol>
+<ol> 6. Enter email address in input and click arrow button </ol>
+<ol> 7. Verify success message 'You have been successfully subscribed!' is visible </ol>

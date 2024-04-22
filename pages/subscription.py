@@ -12,6 +12,7 @@ class Subscription:
         self.EMAIL_INPUT = (By.XPATH, "//input[contains(@id,'susbscribe_email')]")
         self.EMAIL_BTN = (By.XPATH, "//button[contains(@id,'subscribe')]")
         self.SUBSCRIPTION_SENT = (By.XPATH, "//div[contains(@class,'alert-success alert')]")
+        self.CART_BTN = (By.XPATH, "//a[@href='/view_cart'][contains(.,'Cart')]")
         
 
     def scroll_by_amount(self, x_pixels, y_pixels):
@@ -37,6 +38,13 @@ class Subscription:
     def email_btn(self):
         try:
             WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.EMAIL_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error:  btn not found")
+            return False
+        
+    def cart_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.CART_BTN)).click()
         except (NoSuchElementException, TimeoutException):
             print("Error:  btn not found")
             return False

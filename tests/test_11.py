@@ -1,0 +1,26 @@
+import unittest
+from selenium import webdriver
+from pages.subscription import Subscription
+import time 
+
+
+class RegisterDemo(unittest.TestCase):
+    def setUp(self):
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--incognito")
+        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver.get('http://automationexercise.com')
+        self.driver.maximize_window()
+        print("page loaded")
+
+    def test_subscrition(self):
+        login_page = Subscription(self.driver)
+        print("Main page, Current URL:", self.driver.current_url)
+        login_page.cart_btn()
+        login_page.get_subscrition_message_text()
+        print("Assertion passed: 'subscrition' text is visible")
+        login_page.enter_email("testemail@gmail.com")
+        login_page.email_btn()
+        login_page.get_success_message_text()
+        print("Assertion passed: 'You have been successfully subscribed!' text is visible")
+        time.sleep(5)
