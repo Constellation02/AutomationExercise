@@ -36,3 +36,6 @@ class ExistingEmailDemo(unittest.TestCase):
         login_page.brand()
         print("Assertion passed: 'brand' text is visible")
         time.sleep(5)
+    
+    def tearDown(self):
+        self.driver.quit()

@@ -122,3 +122,28 @@ In order to generate Report:
 <ol> 3. Verify that home page is visible successfully </ol>
 <ol> 4. Click on 'Test Cases' button </ol>
 <ol> 5. Verify user is navigated to test cases page successfully </ol>
+
+---
+
+### :white_check_mark: Test Case 8: Verify All Products and product detail page
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click on 'Products' button </ol>
+<ol> 5. Verify user is navigated to ALL PRODUCTS page successfully </ol>
+<ol> 6. The products list is visible </ol>
+<ol> 7. Click on 'View Product' of first product </ol>
+<ol> 8. User is landed to product detail page </ol>
+<ol> 9. Verify that detail detail is visible: product name, category, price, availability, condition, brand </ol>
+
+---
+
+### :white_check_mark: Test Case 9: Search Product
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click on 'Products' button </ol>
+<ol> 5. Verify user is navigated to ALL PRODUCTS page successfully </ol>
+<ol> 6. Enter product name in search input and click search button </ol>
+<ol> 7. Verify 'SEARCHED PRODUCTS' is visible </ol>
+<ol> 8. Verify all the products related to search are visible </ol>
