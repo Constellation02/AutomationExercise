@@ -158,3 +158,41 @@ In order to generate Report:
 <ol> 5. Verify text 'SUBSCRIPTION' </ol>
 <ol> 6. Enter email address in input and click arrow button </ol>
 <ol> 7. Verify success message 'You have been successfully subscribed!' is visible </ol>
+
+---
+
+### :white_check_mark: Test Case 11: Verify Subscription in Cart page
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click 'Cart' button and scroll down to footer </ol>
+<ol> 5. Verify text 'SUBSCRIPTION' </ol>
+<ol> 6. Enter email address in input and click arrow button </ol>
+<ol> 7. Verify success message 'You have been successfully subscribed!' is visible </ol>
+
+---
+
+### :white_check_mark: Test Case 12: Add Products in Cart
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click 'Products' button </ol>
+<ol> 5. Hover over first product and click 'Add to cart' </ol>
+<ol> 6. Click 'Continue Shopping' button </ol>
+<ol> 7. Hover over second product and click 'Add to cart' </ol>
+<ol> 8. Click 'View Cart' button </ol>
+<ol> 9. Verify both products are added to Cart </ol>
+<ol> 10. Verify their prices, quantity and total price </ol>
+
+---
+
+### :white_check_mark: Test Case 13: Verify Product quantity in Cart
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click 'View Product' for any product on home page </ol>
+<ol> 5. Verify product detail is opened </ol>
+<ol> 6. Increase quantity to 4 </ol>
+<ol> 7. Click 'Add to cart' button </ol>
+<ol> 8. Click 'View Cart' button </ol>
+<ol> 9. Verify that product is displayed in cart page with exact quantity </ol>
