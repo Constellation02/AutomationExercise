@@ -261,3 +261,15 @@ In order to generate Report:
 <ol> 13. Enter payment details: Name on Card, Card Number, CVC, Expiration date </ol>
 <ol> 14. Click 'Pay and Confirm Order' button </ol>
 <ol> 15. Verify success message 'Congratulations! Your order has been confirmed!' </ol>
+
+---
+
+### :white_check_mark: Test Case 17: Remove Products From Cart
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Add products to cart </ol>
+<ol> 5. Click 'Cart' button </ol>
+<ol> 6. Verify that cart page is displayed </ol>
+<ol> 7. Click 'X' button corresponding to particular product </ol>
+<ol> 8. Verify that product is removed from the cart </ol>

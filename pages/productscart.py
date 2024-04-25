@@ -18,6 +18,9 @@ class CartProductss:
         self.QUANTITY = (By.XPATH, "(//button[contains(.,'1')])[1]")
         self.TOTAL01 = (By.XPATH, "//p[@class='cart_total_price'][contains(.,'Rs. 500')]")
         self.TOTAL02 = (By.XPATH, "//p[@class='cart_total_price'][contains(.,'Rs. 400')]")
+        self.ELIMINATE_PRODUCT01 = (By.XPATH, "(//i[contains(@class,'fa fa-times')])[1]")
+        self.ELIMINATE_PRODUCT02 = (By.XPATH, "(//i[contains(@class,'fa fa-times')])[2]")
+        self.CART_EMPTY = (By.XPATH, "//b[contains(.,'Cart is empty!')]")
 
     def products_btn(self):
         try:
@@ -90,4 +93,25 @@ class CartProductss:
             print("Error: No text found!")
             return False
         assert element_text == "Rs. 400", f"Expected 'Rs. 400' but got '{element_text}'"
+
+    def scroll_by_amount(self, x_pixels, y_pixels):
+        """Scroll the window by the given amount."""
+        scroll_script = f"window.scrollBy({x_pixels}, {y_pixels})"
+        self.driver.execute_script(scroll_script)
+
+    def eliminate_products_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.ELIMINATE_PRODUCT01)).click()
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.ELIMINATE_PRODUCT02)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+        
+    def cart_empty(self):
+        try:
+           element_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.CART_EMPTY)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert element_text == "Cart is empty!", f"Expected 'Cart is empty!' but got '{element_text}'"
         
