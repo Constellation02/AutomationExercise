@@ -24,3 +24,6 @@ class QuantityCartDemo(unittest.TestCase):
         login_page.quantity()
         print("Assertion passed: '4' text is visible")
         time.sleep(5)
+
+    def tearDown(self):
+        self.driver.quit()

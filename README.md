@@ -242,3 +242,22 @@ In order to generate Report:
 <ol>16. Verify success message 'Congratulations! Your order has been confirmed!' </ol>
 <ol> 17. Click 'Delete Account' button </ol>
 <ol> 18. Verify that 'ACCOUNT DELETED!' and click 'Continue' button </ol>
+
+---
+
+### :white_check_mark: Test Case 16: Place Order: Login before Checkout
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click 'Signup / Login' button </ol>
+<ol> 5. Fill email, password and click 'Login' button </ol>
+<ol> 6. Verify 'Logged in as username' at top </ol>
+<ol> 7. Add products to cart </ol>
+<ol> 8. Click 'Cart' button </ol>
+<ol> 9. Verify that cart page is displayed </ol>
+<ol> 10. Click Proceed To Checkout </ol>
+<ol> 11. Verify Address Details and Review Your Order </ol>
+<ol> 12. Enter description in comment text area and click 'Place Order' </ol>
+<ol> 13. Enter payment details: Name on Card, Card Number, CVC, Expiration date </ol>
+<ol> 14. Click 'Pay and Confirm Order' button </ol>
+<ol> 15. Verify success message 'Congratulations! Your order has been confirmed!' </ol>

@@ -24,3 +24,6 @@ class RegisterDemo(unittest.TestCase):
         login_page.get_success_message_text()
         print("Assertion passed: 'You have been successfully subscribed!' text is visible")
         time.sleep(5)
+
+    def tearDown(self):
+        self.driver.quit()

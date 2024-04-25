@@ -55,6 +55,9 @@ class PlaceOrder:
         self.FINAL_CONTINUE_BTN = (By.XPATH, "//a[contains(@data-qa,'continue-button')]")
         self.SIGNUP_LOGIN_BTN = (By.XPATH, "//a[@href='/login'][contains(.,'Signup / Login')]")
         self.HOME_BTN = (By.XPATH, "//a[@href='/'][contains(.,'Home')]")
+        self.EMAIL_EXISTING = (By.XPATH, "//input[contains(@data-qa,'login-email')]")
+        self.PASSWORD_EXISTING = (By.XPATH, "//input[contains(@type,'password')]")
+        self.LOGIN_BTN = (By.XPATH, "//button[@type='submit'][contains(.,'Login')]")
         
 
     def scroll_by_amount(self, x_pixels, y_pixels):
@@ -269,4 +272,13 @@ class PlaceOrder:
             WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.HOME_BTN)).click()
         except (NoSuchElementException, TimeoutException):
             print("Error: First btn products not found")
+            return False
+        
+    def login_info(self, email, password):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.EMAIL_EXISTING)).send_keys(email)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.PASSWORD_EXISTING)).send_keys(password)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.LOGIN_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: check box not found")
             return False

@@ -49,3 +49,5 @@ class PlaceOrderDemo(unittest.TestCase):
         login_page.final_continue_btn()
         time.sleep(10)
         
+    def tearDown(self):
+        self.driver.quit()
