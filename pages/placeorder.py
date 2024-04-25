@@ -53,6 +53,8 @@ class PlaceOrder:
         self.DELETE_ACCT = (By.XPATH, "//a[@href='/delete_account'][contains(.,'Delete Account')]")
         self.ACCOUNT_DELETED_B = (By.XPATH, "//b[contains(.,'Account Deleted!')]")
         self.FINAL_CONTINUE_BTN = (By.XPATH, "//a[contains(@data-qa,'continue-button')]")
+        self.SIGNUP_LOGIN_BTN = (By.XPATH, "//a[@href='/login'][contains(.,'Signup / Login')]")
+        self.HOME_BTN = (By.XPATH, "//a[@href='/'][contains(.,'Home')]")
         
 
     def scroll_by_amount(self, x_pixels, y_pixels):
@@ -251,6 +253,20 @@ class PlaceOrder:
     def final_continue_btn(self):
         try:
             WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.FINAL_CONTINUE_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+        
+    def signup_login_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.SIGNUP_LOGIN_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+    
+    def home_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.HOME_BTN)).click()
         except (NoSuchElementException, TimeoutException):
             print("Error: First btn products not found")
             return False
