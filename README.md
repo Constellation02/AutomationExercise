@@ -285,3 +285,15 @@ In order to generate Report:
 <ol> 6. Verify that category page is displayed and confirm text 'WOMEN - DRESS PRODUCTS' </ol>
 <ol> 7. On left side bar, click on any sub-category link of 'Men' category </ol>
 <ol> 8. Verify that user is navigated to that category page </ol>
+
+---
+
+### :white_check_mark: Test Case 19: View & Cart Brand Products
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Click on 'Products' button </ol>
+<ol> 4. Verify that Brands are visible on left side bar </ol>
+<ol> 5. Click on any brand name </ol> 
+<ol> 6. Verify that user is navigated to brand page and brand products are displayed </ol>
+<ol> 7. On left side bar, click on any other brand link </ol>
+<ol> 8. Verify that user is navigated to that brand page and can see products </ol>

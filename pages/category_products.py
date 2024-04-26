@@ -16,6 +16,10 @@ class Category:
         self.MEN = (By.XPATH, "//a[@href='#Men']")
         self.JEANS = (By.XPATH, "//a[@href='/category_products/6']")
         self.MEN_JEANS_TEXT = (By.XPATH, "//h2[@class='title text-center'][contains(.,'Men - Jeans Products')]")
+        self.PRODUCTS_BTN = (By.XPATH, "//a[@href='/products']")
+        self.BRANDS_TEXT = (By.XPATH, "//h2[contains(.,'Brands')]")
+        self.POLO_BTN = (By.XPATH, "//a[@href='/brand_products/Polo']")
+        self.POLO_TEXT = (By.XPATH, "//h2[@class='title text-center'][contains(.,'Brand - Polo Products')]")
 
 
     def womancategory_btn(self):
@@ -54,3 +58,33 @@ class Category:
             print("Error: No text found!")
             return False
         assert delete_text == "MEN - JEANS PRODUCTS", f"Expected 'MEN - JEANS PRODUCTS'' but got '{delete_text}'"    
+    
+    def products_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.PRODUCTS_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+    
+    def get_brands(self):
+        try:
+           delete_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.BRANDS_TEXT)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert delete_text == "BRANDS", f"Expected 'BRANDS'' but got '{delete_text}'" 
+
+    def polo_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.POLO_BTN)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False   
+        
+    def get_polo_products(self):
+        try:
+           delete_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.POLO_TEXT)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert delete_text == "BRAND - POLO PRODUCTS", f"Expected 'BRAND - POLO PRODUCTS'' but got '{delete_text}'"
