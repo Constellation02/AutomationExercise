@@ -297,3 +297,21 @@ In order to generate Report:
 <ol> 6. Verify that user is navigated to brand page and brand products are displayed </ol>
 <ol> 7. On left side bar, click on any other brand link </ol>
 <ol> 8. Verify that user is navigated to that brand page and can see products </ol>
+
+---
+
+### :white_check_mark: Test Case 20: Search Products and Verify Cart After Login
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Click on 'Products' button </ol> 
+<ol> 4. Verify user is navigated to ALL PRODUCTS page successfully </ol>
+<ol> 5. Enter product name in search input and click search button </ol>
+<ol> 6. Verify 'SEARCHED PRODUCTS' is visible </ol>
+<ol> 7. Verify all the products related to search are visible </ol>
+<ol> 8. Add those products to cart </ol>
+<ol> 9. Click 'Cart' button and verify that products are visible in cart </ol>
+<ol> 10. Click 'Signup / Login' button and submit login details </ol>
+<ol> 11. Again, go to Cart page </ol>
+<ol> 12. Verify that those products are visible in cart after login as well </ol>
+<ol> 13. Remove all products that have been added </ol>
+<ol> 14. Verify 'Cart is empty! Click here to buy products.' is visible </ol>
