@@ -315,3 +315,16 @@ In order to generate Report:
 <ol> 12. Verify that those products are visible in cart after login as well </ol>
 <ol> 13. Remove all products that have been added </ol>
 <ol> 14. Verify 'Cart is empty! Click here to buy products.' is visible </ol>
+
+---
+
+### :white_check_mark: Test Case 21: Add review on product
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Click on 'Products' button </ol>
+<ol> 4. Verify user is navigated to ALL PRODUCTS page successfully </ol>
+<ol> 5. Click on 'View Product' button </ol>
+<ol> 6. Verify 'Write Your Review' is visible </ol>
+<ol> 7. Enter name, email and review </ol>
+<ol> 8. Click 'Submit' button </ol>
+<ol> 9. Verify success message 'Thank you for your review.' </ol>

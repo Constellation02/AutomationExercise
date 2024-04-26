@@ -32,6 +32,12 @@ class Category:
         self.EMAIL_ACCT = (By.XPATH, "//input[contains(@data-qa,'login-email')]")
         self.PASSWORD_ACCT = (By.XPATH, "//input[contains(@type,'password')]")
         self.GO_BACK_TO_CART = (By.XPATH, "//a[@href='/view_cart'][contains(.,'Cart')]")
+        self.VIEW_PRODUCT = (By.XPATH, "//a[@href='/product_details/1'][contains(.,'View Product')]")
+        self.NAME = (By.XPATH, "//input[contains(@id,'name')]")
+        self.EMAIL_ADDRESS = (By.XPATH, "//input[@id='email']")
+        self.ADD_REVIEW = (By.XPATH, "//textarea[contains(@id,'review')]")
+        self.SUBMIT = (By.XPATH, "//button[contains(@id,'button-review')]")
+        self.THANK_U = (By.XPATH, "//span[contains(.,'Thank you for your review.')]")
 
 
     def womancategory_btn(self):
@@ -157,3 +163,28 @@ class Category:
         except (NoSuchElementException, TimeoutException):
             print("Error: First btn products not found")
             return False
+    
+    def view_product(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.VIEW_PRODUCT)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+        
+    def write_review(self, name, email, review):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.NAME)).send_keys(name)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.EMAIL_ADDRESS)).send_keys(email)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.ADD_REVIEW)).send_keys(review)
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.SUBMIT)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn products not found")
+            return False
+        
+    def get_thank_u(self):
+        try:
+           delete_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.THANK_U)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert delete_text == "Thank you for your review.", f"Expected 'Thank you for your review.'' but got '{delete_text}'"
