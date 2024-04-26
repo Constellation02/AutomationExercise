@@ -328,3 +328,14 @@ In order to generate Report:
 <ol> 7. Enter name, email and review </ol>
 <ol> 8. Click 'Submit' button </ol>
 <ol> 9. Verify success message 'Thank you for your review.' </ol>
+
+---
+
+### :white_check_mark: Test Case 22: Add to cart from Recommended items
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Scroll to bottom of page </ol>
+<ol> 4. Verify 'RECOMMENDED ITEMS' are visible </ol>
+<ol> 5. Click on 'Add To Cart' on Recommended product </ol>
+<ol> 6. Click on 'View Cart' button </ol>
+<ol> 7. Verify that product is displayed in cart page </ol>

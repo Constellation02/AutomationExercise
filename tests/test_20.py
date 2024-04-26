@@ -29,7 +29,7 @@ class PlaceOrderDemo(unittest.TestCase):
         login_page.go_back_to_cart_btn()
         login_page.get_premium_polo2()
         print("Assertion passed: 'Premium Polo T-Shirts' text is visible")
-        time.sleep(10)
+        time.sleep(1)
 
 
     
