@@ -273,3 +273,15 @@ In order to generate Report:
 <ol> 6. Verify that cart page is displayed </ol>
 <ol> 7. Click 'X' button corresponding to particular product </ol>
 <ol> 8. Verify that product is removed from the cart </ol>
+
+---
+
+### :white_check_mark: Test Case 18: View Category Products
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that categories are visible on left side bar </ol>
+<ol> 4. Click on 'Women' category </ol>
+<ol> 5. Click on any category link under 'Women' category, for example: Dress </ol>
+<ol> 6. Verify that category page is displayed and confirm text 'WOMEN - DRESS PRODUCTS' </ol>
+<ol> 7. On left side bar, click on any sub-category link of 'Men' category </ol>
+<ol> 8. Verify that user is navigated to that category page </ol>
