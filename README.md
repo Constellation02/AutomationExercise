@@ -339,3 +339,21 @@ In order to generate Report:
 <ol> 5. Click on 'Add To Cart' on Recommended product </ol>
 <ol> 6. Click on 'View Cart' button </ol>
 <ol> 7. Verify that product is displayed in cart page </ol>
+
+---
+
+### :white_check_mark: Test Case 23: Verify address details in checkout page
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Click 'Signup / Login' button </ol>
+<ol> 5. Fill all details in Signup and create account </ol>
+<ol> 6. Verify 'ACCOUNT CREATED!' and click 'Continue' button </ol>
+<ol> 7. Verify ' Logged in as username' at top </ol>
+<ol> 8. Add products to cart </ol>
+<ol> 9. Click 'Cart' button </ol>
+<ol> 10. Verify that cart page is displayed </ol>
+<ol> 11. Click Proceed To Checkout </ol>
+<ol> 12. Verify that the delivery address and the billing address is same address filled at the time registration of account </ol>
+<ol> 13. Click 'Delete Account' button </ol>
+<ol> 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button </ol>
