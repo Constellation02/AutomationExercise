@@ -37,7 +37,9 @@ class PlaceOrderDemo(unittest.TestCase):
         print("current page, Current URL:", self.driver.current_url)
         login_page.checkout_btn()
         login_page.verify_delivery_address()
-        time.sleep(20)
+        login_page.btn_delete_acct()
+        login_page.get_deleted_message()
+        time.sleep(5)
 
 
     def tearDown(self):

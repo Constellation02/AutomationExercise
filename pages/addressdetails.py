@@ -45,6 +45,23 @@ class Address:
         self.CHECKOUT_BTN = (By.XPATH, "//a[contains(@class,'btn btn-default check_out')]")
         self.delivery_address_element = (By.ID, "address_delivery")
         self.registered_address_element = (By.ID, "address_invoice")
+        self.DELETE_ACCT = (By.XPATH, "//a[@href='/delete_account']")
+        self.ACCT_DELETED = (By.XPATH, "//b[contains(.,'Account Deleted!')]")
+
+    def btn_delete_acct(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.DELETE_ACCT)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error: First btn sign up not found")
+            return False
+        
+    def get_deleted_message(self):
+        try:
+           create_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.ACCT_DELETED)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert create_text == "ACCOUNT DELETED!", f"Expected 'ACCOUNT DELETED!' but got '{create_text}'"
 
 
     def get_delivery_address(self):

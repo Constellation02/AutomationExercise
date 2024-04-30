@@ -357,3 +357,29 @@ In order to generate Report:
 <ol> 12. Verify that the delivery address and the billing address is same address filled at the time registration of account </ol>
 <ol> 13. Click 'Delete Account' button </ol>
 <ol> 14. Verify 'ACCOUNT DELETED!' and click 'Continue' button </ol>
+
+---
+
+### :white_check_mark: Test Case 24: Download Invoice after purchase order
+<ol> 1. Launch browser </ol> 
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfull </ol>
+<ol> 4. Add products to cart </ol>
+<ol> 5. Click 'Cart' button </ol>
+<ol> 6. Verify that cart page is displayed </ol>
+<ol> 7. Click Proceed To Checkout </ol>
+<ol> 8. Click 'Register / Login' button </ol>
+<ol> 9. Fill all details in Signup and create account </ol>
+<ol> 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button </ol>
+<ol> 11. Verify ' Logged in as username' at top </ol>
+<ol> 12. Click 'Cart' button </ol>
+<ol> 13. Click 'Proceed To Checkout' button </ol>
+<ol> 14. Verify Address Details and Review Your Order </ol>
+<ol> 15. Enter description in comment text area and click 'Place Order' </ol>
+<ol> 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date </ol>
+<ol> 17. Click 'Pay and Confirm Order' button </ol>
+<ol> 18. Verify success message 'Congratulations! Your order has been confirmed!' </ol>
+<ol> 19. Click 'Download Invoice' button and verify invoice is downloaded successfully </ol>
+<ol> 20. Click 'Continue' button </ol>
+<ol> 21. Click 'Delete Account' button </ol>
+<ol> 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button </ol>
