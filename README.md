@@ -383,3 +383,25 @@ In order to generate Report:
 <ol> 20. Click 'Continue' button </ol>
 <ol> 21. Click 'Delete Account' button </ol>
 <ol> 22. Verify 'ACCOUNT DELETED!' and click 'Continue' button </ol>
+
+---
+
+### :white_check_mark: Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Scroll down page to bottom </ol>
+<ol> 5. Verify 'SUBSCRIPTION' is visible </ol>
+<ol> 6. Click on arrow at bottom right side to move upward </ol>
+<ol> 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen </ol>
+
+---
+
+### :white_check_mark: Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
+<ol> 1. Launch browser </ol>
+<ol> 2. Navigate to url 'http://automationexercise.com' </ol>
+<ol> 3. Verify that home page is visible successfully </ol>
+<ol> 4. Scroll down page to bottom </ol>
+<ol> 5. Verify 'SUBSCRIPTION' is visible </ol>
+<ol> 6. Scroll up page to top </ol>
+<ol> 7. Verify that page is scrolled up and 'Full-Fledged practice website for Automation Engineers' text is visible on screen </ol>

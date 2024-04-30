@@ -13,6 +13,8 @@ class Subscription:
         self.EMAIL_BTN = (By.XPATH, "//button[contains(@id,'subscribe')]")
         self.SUBSCRIPTION_SENT = (By.XPATH, "//div[contains(@class,'alert-success alert')]")
         self.CART_BTN = (By.XPATH, "//a[@href='/view_cart'][contains(.,'Cart')]")
+        self.ARROW_UP = (By.XPATH, "//i[contains(@class,'fa fa-angle-up')]")
+        self.TITLE = (By.XPATH, "(//h2[contains(.,'Full-Fledged practice website for Automation Engineers')])[1]")
         
 
     def scroll_by_amount(self, x_pixels, y_pixels):
@@ -27,6 +29,14 @@ class Subscription:
             print("Error: No text found!")
             return False
         assert element_text == "SUBSCRIPTION", f"Expected 'SUBSCRIPTION' but got '{element_text}'"
+
+    def get_title_text(self):
+        try:
+           element_text = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.TITLE)).text
+        except(NoSuchElementException, TimeoutException):
+            print("Error: No text found!")
+            return False
+        assert element_text == "Full-Fledged practice website for Automation Engineers", f"Expected 'Full-Fledged practice website for Automation Engineers' but got '{element_text}'"
 
     def enter_email(self, email):
         try:
@@ -56,3 +66,10 @@ class Subscription:
             print("Error: No text found!")
             return False
         assert element_text == "You have been successfully subscribed!", f"Expected 'You have been successfully subscribed!' but got '{element_text}'"
+
+    def arrowup_btn(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(self.ARROW_UP)).click()
+        except (NoSuchElementException, TimeoutException):
+            print("Error:  btn not found")
+            return False
