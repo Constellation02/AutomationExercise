@@ -20,9 +20,17 @@ class loginUser {
             delete_acct: () => cy.get("a[href='/delete_account']"),
             delete_text: () => cy.contains("Account Deleted!"),
             //email or password is incorrect! 
-            loginfails: () => cy.contains("Your email or password is incorrect!")
+            loginfails: () => cy.contains("Your email or password is incorrect!"),
+            //Logout Btn 
+            logout_btn: () => cy.get("a[href='/logout']")
         };
     }
+
+    // Click on Logout Btn
+    click_LogoutBtn() 
+    {
+        this.elements.logout_btn().click();
+    };
     // Click on 'Signup / Login' button
     click_login_registerBtn() 
     {
@@ -46,7 +54,7 @@ class loginUser {
     };
     verify_logged_text()
     {
-        this.elements.Logged_in_text().should('have.text', 'Logged in as  fabio')
+        this.elements.Logged_in_text().should('have.text', 'Fabio Armando')
     };
     // Delete & Verify Account Deleted! is visible
     click_delete_Btn() 
