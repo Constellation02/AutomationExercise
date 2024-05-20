@@ -7,7 +7,7 @@ class loginUser {
         this.elements = {
             // 'Signup / Login' button locator
             login_and_register_btn: () => cy.get("a[href='/login']"),
-            // Verify 'Login to your account' locator 
+            // Verify 'Login to your account' text 
             login_text: () => cy.get("div[class='login-form'] h2"),
             // Email Address input locator & Password input locator
             enter_email: () => cy.get("input[data-qa='login-email']"),
@@ -22,10 +22,28 @@ class loginUser {
             //email or password is incorrect! 
             loginfails: () => cy.contains("Your email or password is incorrect!"),
             //Logout Btn 
-            logout_btn: () => cy.get("a[href='/logout']")
+            logout_btn: () => cy.get("a[href='/logout']"),
+            // Verify 'New User Signup!' text 
+            newusersignup_text: () => cy.get("div[class='signup-form'] h2"),
+            // Enter name and email address
+            register_name: () => cy.xpath("//input[contains(@name,'name')]"),
+            register_email: () => cy.xpath("//input[contains(@data-qa,'signup-email')]"),
+            register_btn: () => cy.xpath("//button[contains(.,'Signup')]"),
+            existing_email: () => cy.contains("Email Address already exist!")
         };
     }
-
+    // Register user and email 
+    enter_name(name, email) {
+        this.elements.register_name().type(name);
+        this.elements.register_email().type(email);
+        this.elements.register_btn().click();
+        this.elements.existing_email().should('have.text', 'Email Address already exist!')
+    };
+    // Verify 'New User Signup!' is visible
+    verify_usersignup_text()
+    {
+        this.elements.newusersignup_text().should('have.text', 'New User Signup!')
+    };
     // Click on Logout Btn
     click_LogoutBtn() 
     {
