@@ -1,5 +1,4 @@
 
-
 require('cypress-xpath');
 
 class loginUser {
