@@ -23,6 +23,13 @@ class testCase {
             product_availability: () => cy.contains('Availability:'),
             product_condition: () => cy.contains('Condition:'),
             product_brand: () => cy.contains('Brand:'),
+            // Search 
+            seach: () => cy.get("input[placeholder='Search Product']"),
+            search_btn: () => cy.get("button[type='button']"),
+            // Searched products title 
+            searched_product: () => cy.contains('Searched Products'),
+            frozentop: () => cy.contains('Frozen Tops For Kids'),
+            
 
         };
     }
@@ -60,7 +67,20 @@ class testCase {
         this.elements.product_condition().should('be.visible')
         this.elements.product_condition().should('be.visible')
     }
-
+    // search bar 
+    search_type(product)
+    {
+        this.elements.seach().should('exist');
+        this.elements.seach().type(product);
+        this.elements.search_btn().click();
+    }
+    // verify text 
+    searched_producttext()
+    {
+        this.elements.searched_product().should('be.visible');
+        this.elements.frozentop().should('have.text', 'Frozen Tops For Kids');
+    }
+    
 };
 
 module.exports = new testCase();
