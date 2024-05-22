@@ -50,10 +50,22 @@ class checkout {
             payconfirmation: () => cy.contains('Your order has been placed successfully!'),
             orderplaced: () => cy.contains('Order Placed!'),
             delete_acct: () => cy.get("a[href='/delete_account']"),
-            deleted_text: () => cy.contains('Account Deleted!')
+            deleted_text: () => cy.contains('Account Deleted!'),
+            //login credentials 
+            emai_address: () => cy.get("input[data-qa='login-email']"),
+            password_input: () => cy.get("input[placeholder='Password']"),
+            login_btn: () => cy.get("button[data-qa='login-button']"),
+
 
             
         };
+    }
+    // login
+    login(emial, pass)
+    {
+        this.elements.emai_address().type(emial)
+        this.elements.password_input().type(pass)
+        this.elements.login_btn().click()
     }
     // Btn click register 
     clickregister()
@@ -128,6 +140,27 @@ class checkout {
     {
         this.elements.acct_createdtext().should('have.text', 'Account Created!')
         this.elements.continue_btn().click()
+        this.elements.product01().eq(0).click();
+        this.elements.continue_shop().click();
+        this.elements.product02().eq(0).click();
+        this.elements.viewcart_btn().click();
+        cy.url().should('include', '/view_cart')
+        this.elements.procedtocheckout().click();
+        this.elements.placeorder().click()
+        this.elements.nameoncard().type(card)
+        this.elements.cardnumber().type(number)
+        this.elements.cvc().type(cvc)
+        this.elements.expirationmonth().type(expirationmonth)
+        this.elements.expirationyear().type(expirationyear)
+        this.elements.pay().click()
+        this.elements.orderplaced().should('have.text', 'Order Placed!')
+        this.elements.delete_acct().click()
+        this.elements.deleted_text().should('have.text', 'Account Deleted!')
+        this.elements.continue_btn().click()
+    }
+    // test 16 transaction
+    transaction16(card, number, cvc, expirationmonth, expirationyear)
+    {
         this.elements.product01().eq(0).click();
         this.elements.continue_shop().click();
         this.elements.product02().eq(0).click();
