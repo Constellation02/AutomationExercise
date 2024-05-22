@@ -1,5 +1,5 @@
 require('cypress-xpath');
-import subCrition from '../../pagess/subcristion.cy'
+import addProducts from '../../pagess/addproducts.cy'
 
 
 
@@ -12,9 +12,10 @@ describe('Verify Subscription in Cart page', () => {
     it('Click Cart button and Verify text SUBSCRIPTION', () => {
         // Assert that the homepage is loaded successfully
         cy.url().should('eq', 'https://automationexercise.com/')
-        subCrition.btn_cart();
-        subCrition.verify_subscrition();
-        subCrition.input_email('testemail@gmail.com');
+        addProducts.btn_products()
+        addProducts.select_product01()
+        addProducts.products_present()
+        
         
     });
    
