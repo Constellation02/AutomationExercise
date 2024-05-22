@@ -34,9 +34,9 @@ class addProducts {
     }
     select_product01()
     {
-        this.elements.product01().eq(0).click();
+        this.elements.product01().click();
         this.elements.continue_shop().click();
-        this.elements.product02().eq(0).click();
+        this.elements.product02().click();
         this.elements.viewcart_btn().click();
     }
     // product assertion in the cart 
