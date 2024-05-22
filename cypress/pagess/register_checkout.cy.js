@@ -12,6 +12,7 @@ class checkout {
             continue_shop: () => cy.contains("Continue Shopping"),
             procedtocheckout: () => cy.get('.btn.btn-default.check_out'),
             register: () => cy.contains('u', 'Register / Login'),
+            register0: () => cy.get("a[href='/login']"),
             name: () => cy.get("input[placeholder='Name']"),
             email: () => cy.get("input[data-qa='signup-email']"),
             signup_btn: () => cy.get("button[data-qa='signup-button']"),
@@ -53,6 +54,11 @@ class checkout {
 
             
         };
+    }
+    // Btn click register 
+    clickregister()
+    {
+        this.elements.register0().click();
     }
     select_product01()
     {
@@ -111,7 +117,30 @@ class checkout {
         this.elements.expirationmonth().type(expirationmonth)
         this.elements.expirationyear().type(expirationyear)
         this.elements.pay().click()
-        //this.elements.payconfirmation().should('exist')
+        this.elements.payconfirmation().should('exist')
+        this.elements.orderplaced().should('have.text', 'Order Placed!')
+        this.elements.delete_acct().click()
+        this.elements.deleted_text().should('have.text', 'Account Deleted!')
+        this.elements.continue_btn().click()
+    }
+    // test 15 transaction 
+    transaction15(card, number, cvc, expirationmonth, expirationyear)
+    {
+        this.elements.acct_createdtext().should('have.text', 'Account Created!')
+        this.elements.continue_btn().click()
+        this.elements.product01().eq(0).click();
+        this.elements.continue_shop().click();
+        this.elements.product02().eq(0).click();
+        this.elements.viewcart_btn().click();
+        cy.url().should('include', '/view_cart')
+        this.elements.procedtocheckout().click();
+        this.elements.placeorder().click()
+        this.elements.nameoncard().type(card)
+        this.elements.cardnumber().type(number)
+        this.elements.cvc().type(cvc)
+        this.elements.expirationmonth().type(expirationmonth)
+        this.elements.expirationyear().type(expirationyear)
+        this.elements.pay().click()
         this.elements.orderplaced().should('have.text', 'Order Placed!')
         this.elements.delete_acct().click()
         this.elements.deleted_text().should('have.text', 'Account Deleted!')
