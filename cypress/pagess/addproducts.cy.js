@@ -19,6 +19,11 @@ class addProducts {
             total02: () => cy.get('tbody tr:nth-child(2) td:nth-child(5) p:nth-child(1)'),
             quantity01:  () => cy.get('tbody tr:nth-child(1) td:nth-child(4) button:nth-child(1)'),
             quantity02:  () => cy.get('tbody tr:nth-child(2) td:nth-child(4) button:nth-child(1)'),
+            view_product: () => cy.get("a[href='/product_details/3']"),
+            incrise_quantity: () => cy.get("input[value='1']"),
+            addtocart: () => cy.get("button[type='button']"),
+            quantity03: () => cy.get('.disabled'),
+
 
         };
     }
@@ -44,8 +49,16 @@ class addProducts {
         this.elements.total01().should('have.text', 'Rs. 500');
         this.elements.total02().should('have.text', 'Rs. 400');
         this.elements.quantity01().should('exist');
-        this.elements.quantity02().should('exist');
-        
+        this.elements.quantity02().should('exist'); 
+    }
+    // view product btn
+    viewproduct(quantity)
+    {
+        this.elements.view_product().click();
+        this.elements.incrise_quantity().clear().type(quantity)
+        this.elements.addtocart().click()
+        this.elements.viewcart_btn().click()
+        this.elements.quantity03().should('have.text', '4')
     }
 };
 
